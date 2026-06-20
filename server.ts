@@ -647,7 +647,9 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
 async function startServer() {
   try {
     writeLog("Initializing startServer...");
-    if (process.env.NODE_ENV !== "production") {
+    const distPath = path.join(process.cwd(), "dist");
+    const isProduction = process.env.NODE_ENV === "production" || fs.existsSync(path.join(distPath, "index.html"));
+    if (!isProduction) {
       writeLog("Configuring Vite in middlewareMode (development)...");
       const vite = await createViteServer({
         server: { middlewareMode: true },
@@ -656,7 +658,6 @@ async function startServer() {
       app.use(vite.middlewares);
       writeLog("Vite middleware mounted successfully.");
     } else {
-      const distPath = path.join(process.cwd(), "dist");
       writeLog(`Production mode asset serving. distPath: ${distPath}`);
       app.use(express.static(distPath));
       app.get("*", (req, res) => {
