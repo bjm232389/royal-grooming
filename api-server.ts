@@ -1,9 +1,9 @@
 import express from "express";
 import path from "path";
 import fs from "fs";
-import { createServer as createViteServer } from "vite";
 import { v2 as cloudinary } from "cloudinary";
 import multer from "multer";
+import cors from "cors";
 import dotenv from "dotenv";
 
 // Load environment variables
@@ -11,6 +11,12 @@ dotenv.config();
 
 const app = express();
 const PORT = parseInt(process.env.PORT || "3000", 10);
+
+// Allow requests from Cloudflare Pages (any domain) and local dev
+app.use(cors({
+  origin: true,
+  credentials: true,
+}));
 
 // Internal logger for diagnosis
 const LOG_FILE = path.join(process.cwd(), "server_requests.log");
@@ -24,7 +30,7 @@ function writeLog(message: string) {
   }
 }
 
-writeLog(`Server starting... NODE_ENV: ${process.env.NODE_ENV || "not defined"}`);
+writeLog(`API Server starting... PORT: ${PORT}`);
 
 // Path to JSON-based dynamic database
 const PRODUCTS_DB_PATH = path.join(process.cwd(), "products.json");
@@ -641,27 +647,11 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
 // Vite Middleware & static assets pipeline configuration
 async function startServer() {
   try {
-    writeLog("Initializing startServer...");
-    const distPath = path.join(process.cwd(), "dist");
-    const isProduction = process.env.NODE_ENV === "production" || fs.existsSync(path.join(distPath, "index.html"));
-    if (!isProduction) {
-      writeLog("Configuring Vite in middlewareMode (development)...");
-      const vite = await createViteServer({
-        server: { middlewareMode: true },
-        appType: "spa",
-      });
-      app.use(vite.middlewares);
-      writeLog("Vite middleware mounted successfully.");
-    } else {
-      writeLog(`Production mode asset serving. distPath: ${distPath}`);
-      app.use(express.static(distPath));
-      app.get("*", (req, res) => {
-        res.sendFile(path.join(distPath, "index.html"));
-      });
-    }
-
+    writeLog("Starting API server...");
     app.listen(PORT, "0.0.0.0", () => {
-      writeLog(`Server successfully booted and listening on: http://0.0.0.0:${PORT}`);
+      writeLog(`API server successfully booted on: http://0.0.0.0:${PORT}`);
+      writeLog(`Uploads served at: /uploads`);
+      writeLog(`API endpoints: GET/POST /api/products, PUT/DELETE /api/products/:id`);
     });
   } catch (err: any) {
     writeLog(`CRITICAL START ERROR: ${err.message}\n${err.stack}`);
