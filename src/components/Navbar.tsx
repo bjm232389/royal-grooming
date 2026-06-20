@@ -14,11 +14,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCart }) => {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-neutral-900 bg-neutral-950/80 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 sm:h-20 max-w-7xl items-center justify-between px-3 sm:px-6 lg:px-8">
         
         {/* Artistic Brand Logo Matching User's Real Identity */}
-        <div className="flex items-center gap-3">
-          <div className="relative h-14 w-14 flex items-center justify-center">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="relative h-10 w-10 sm:h-14 sm:w-14 flex items-center justify-center">
             {/* Soft Cyan Ambient Glow */}
             <div className="absolute inset-0 bg-brand-cyan/15 blur-md rounded-full"></div>
             
@@ -26,7 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCart }) => {
               viewBox="0 0 100 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-12 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                className="h-9 w-9 sm:h-12 sm:w-12 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
             >
               <defs>
                 <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -71,13 +71,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCart }) => {
           </div>
           
           <div className="flex flex-col">
-            <span className="font-serif text-lg font-bold italic tracking-wide text-brand-cyan leading-none">
+            <span className="font-serif text-sm sm:text-lg font-bold italic tracking-wide text-brand-cyan leading-none">
               Royal
             </span>
-            <span className="font-display text-sm font-extrabold tracking-widest text-[#F9D976] leading-none uppercase">
+            <span className="font-display text-[10px] sm:text-sm font-extrabold tracking-widest text-[#F9D976] leading-none uppercase">
               Grooming
             </span>
-            <span className="text-[7.5px] font-mono tracking-widest text-neutral-400 uppercase leading-none mt-0.5">
+            <span className="text-[6px] sm:text-[7.5px] font-mono tracking-widest text-neutral-400 uppercase leading-none mt-0.5">
               Premium Quality
             </span>
           </div>
@@ -86,8 +86,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCart }) => {
         {/* Action Controls Section */}
         <div className="flex items-center gap-3 sm:gap-6">
           
-          {/* Dual Pricing Mode Toggle Selector */}
-          <div className="relative flex items-center rounded-full bg-neutral-900 border border-neutral-800 p-1 select-none">
+          {/* Dual Pricing Mode Toggle Selector — hidden on mobile to save space */}
+          <div className="hidden sm:flex items-center rounded-full bg-neutral-900 border border-neutral-800 p-1 select-none">
             <button
               onClick={() => setPricingMode('retail')}
               className={`relative z-10 px-3 py-1.5 text-xs font-semibold tracking-wider uppercase rounded-full transition-all duration-300 ${
