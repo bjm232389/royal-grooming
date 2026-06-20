@@ -231,24 +231,25 @@ function CatalogApp() {
     fetchProducts();
   }, []);
 
+  const showToastRef = useRef(showToast);
+  showToastRef.current = showToast;
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
         e.preventDefault();
         setAdminMode(prev => {
           const next = !prev;
-          if (typeof window !== 'undefined') {
-            setTimeout(() => {
-              showToast(next ? '🔐 Modo Admin Activado' : '🔒 Modo Admin Desactivado', next ? 'success' : 'info');
-            }, 0);
-          }
+          setTimeout(() => {
+            showToastRef.current(next ? '🔐 Modo Admin Activado' : '🔒 Modo Admin Desactivado', next ? 'success' : 'info');
+          }, 0);
           return next;
         });
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [showToast]);
+  }, []);
 
   // Scroll smoothly down to the catalog section
   const scrollToCatalog = () => {

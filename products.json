@@ -130,5 +130,41 @@
     "media_url": "http://localhost:3000/uploads/product_1781975973955.png",
     "media_type": "image",
     "illustrationType": "pomade"
+  },
+  {
+    "id": "pr-8564",
+    "name": "GEL ROYAL PLEX ",
+    "category": "beard",
+    "priceRetail": 1000,
+    "priceWholesaleMin": 650,
+    "minWholesaleQty": 6,
+    "wholesaleUnitDesc": "Mínimo 6 un.",
+    "description": "GEL ROYAL PLEX ",
+    "features": [],
+    "rating": 5,
+    "featured": true,
+    "inStock": true,
+    "imageUrl": "http://localhost:3000/uploads/product_1781981068559.png",
+    "media_url": "http://localhost:3000/uploads/product_1781981068559.png",
+    "media_type": "image",
+    "illustrationType": "pomade"
+  },
+  {
+    "id": "pr-5894",
+    "name": " royal_grooming.rd",
+    "category": "beard",
+    "priceRetail": 500,
+    "priceWholesaleMin": 325,
+    "minWholesaleQty": 6,
+    "wholesaleUnitDesc": "Mínimo 6 un.",
+    "description": " royal_grooming.rd",
+    "features": [],
+    "rating": 5,
+    "featured": true,
+    "inStock": true,
+    "imageUrl": "http://localhost:3000/uploads/product_1781981185893.png",
+    "media_url": "http://localhost:3000/uploads/product_1781981185893.png",
+    "media_type": "image",
+    "illustrationType": "pomade"
   }
 ]
