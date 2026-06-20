@@ -1,0 +1,132 @@
+import { Product } from './types';
+
+export const CATEGORIES = [
+  { id: 'all', name: 'Todo', desc: 'Todo el catálogo Royal Grooming' },
+  { id: 'beard', name: 'Cuidado de Barba', desc: 'Aceites, bálsamos y elixires para tu barba y bigote.' },
+  { id: 'hair', name: 'Cabello & Estilo', desc: 'Fijación, ceras mate y sprays de volumen profesionales.' },
+  { id: 'tools', name: 'Herramientas', desc: 'Navajas de precisión, peines de alta densidad y barbería premium.' },
+  { id: 'wholesale', name: 'Línea Mayorista', desc: 'Packs de gran volumen con márgenes de ganancia ideales para revendedores.' }
+];
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'pr-01',
+    name: 'Royal Beard Oil Premium',
+    category: 'beard',
+    priceRetail: 1250,
+    priceWholesaleMin: 750,
+    minWholesaleQty: 6,
+    wholesaleUnitDesc: 'Mínimo 6 un.',
+    description: 'Elixir nutritivo premium para barba con infusión de aceite de argán, jojoba pura y cedro canadiense. Hidrata la piel bajo la barba y suaviza el vello rudo.',
+    features: ['Brillo elegante no graso', 'Aroma masculino a madera de cedro', 'Estimula el vello saludable'],
+    rating: 4.9,
+    featured: true,
+    inStock: true,
+    illustrationType: 'oil'
+  },
+  {
+    id: 'pr-02',
+    name: 'Lion Sculpting Beard Balm',
+    category: 'beard',
+    priceRetail: 950,
+    priceWholesaleMin: 580,
+    minWholesaleQty: 6,
+    wholesaleUnitDesc: 'Mínimo 6 un.',
+    description: 'Bálsamo modelador de fijación media-suave formulado con manteca de karité, cera de abejas orgánica y vitamina E. Aporta cuerpo, volumen y control.',
+    features: ['Fijación media de larga duración', 'Elimina el frizz y vellos rebeldes', 'Aroma cítrico noble con menta'],
+    rating: 4.8,
+    featured: true,
+    inStock: true,
+    illustrationType: 'balm'
+  },
+  {
+    id: 'pr-03',
+    name: 'Imperial Matte Clay Pomade',
+    category: 'hair',
+    priceRetail: 1100,
+    priceWholesaleMin: 650,
+    minWholesaleQty: 12,
+    wholesaleUnitDesc: 'Mínimo 12 un.',
+    description: 'Cera de arcilla premium con base de agua para una fijación extrema de acabado mate impecable. No deja residuos y se retira fácilmente al lavarte el cabello.',
+    features: ['Acabado 100% mate natural', 'Fijación de alta intensidad', 'Ideal para peinados modernos estructurados'],
+    rating: 5.0,
+    featured: true,
+    inStock: true,
+    illustrationType: 'pomade'
+  },
+  {
+    id: 'pr-04',
+    name: 'Classic Gold Grooming Spray',
+    category: 'hair',
+    priceRetail: 1400,
+    priceWholesaleMin: 850,
+    minWholesaleQty: 8,
+    wholesaleUnitDesc: 'Mínimo 8 un.',
+    description: 'Spray de peinado profesional ideal para texturizar y dar volumen máximo al cabello antes del secado o como fijador de tacto natural no acartonado.',
+    features: ['Aporta volumen instantáneo', 'Fijación flexible reactivable', 'Ideal para pre-styling profesional'],
+    rating: 4.7,
+    featured: false,
+    inStock: true,
+    illustrationType: 'spray'
+  },
+  {
+    id: 'pr-05',
+    name: 'Carbon Fiber Luxury Shaving Razor v2',
+    category: 'tools',
+    priceRetail: 2100,
+    priceWholesaleMin: 1350,
+    minWholesaleQty: 4,
+    wholesaleUnitDesc: 'Mínimo 4 un.',
+    description: 'Navaja de afeitar profesional construida en fibra de carbono genuina ultra-ligera y cabezal de acero inoxidable con detalles grabados en oro real 18k.',
+    features: ['Distribución de peso ultra equilibrada', 'Mecanismo de cambio rápido de hoja dupla', 'Cabezal premium anticorrosión'],
+    rating: 4.9,
+    featured: true,
+    inStock: true,
+    illustrationType: 'razor'
+  },
+  {
+    id: 'pr-06',
+    name: 'Antistatic Pro Carbon Comb Set',
+    category: 'tools',
+    priceRetail: 650,
+    priceWholesaleMin: 350,
+    minWholesaleQty: 12,
+    wholesaleUnitDesc: 'Mínimo 12 un.',
+    description: 'Set de peines de barbero de grado profesional con tecnología de fibra de carbono. Altamente resistente al calor del secador y químicos de barbería.',
+    features: ['Material antiestático absoluto', 'Resiste temperaturas de hasta 220°C', 'Dientes pulidos láser súper suaves'],
+    rating: 4.6,
+    featured: false,
+    inStock: true,
+    illustrationType: 'comb'
+  },
+  {
+    id: 'pr-07',
+    name: 'Royal Gold Clipper (León Edición Especial)',
+    category: 'tools',
+    priceRetail: 4800,
+    priceWholesaleMin: 3200,
+    minWholesaleQty: 3,
+    wholesaleUnitDesc: 'Mínimo 3 un.',
+    description: 'Máquina recortadora profesional inalámbrica en chasis totalmente metálico dorado. Cuenta con cuchilla estilo T-Blade ultra afilada y motor rotativo de 7200 RPM.',
+    features: ['Batería de larga duración (200 min)', 'Isotipo del León real grabado al centro', 'Corte zero-gap impecable'],
+    rating: 5.0,
+    featured: true,
+    inStock: true,
+    illustrationType: 'clipper'
+  },
+  {
+    id: 'pr-08',
+    name: 'Super Pack Reseller Barbero 20x',
+    category: 'wholesale',
+    priceRetail: 22000,
+    priceWholesaleMin: 14000,
+    minWholesaleQty: 1,
+    wholesaleUnitDesc: '1 Unidad de Pack',
+    description: 'Lote mayorista exclusivo de máximo ahorro que incluye: 10 Pomadas Matte, 5 Aceites de Barba Premium y 5 Aceites Texturizadores classic.',
+    features: ['Ahorro del 45% frente a retail individual', 'Material promocional (pósteres, displays de mesa)', 'Asesoría de ventas incluida'],
+    rating: 5.0,
+    featured: true,
+    inStock: true,
+    illustrationType: 'pack'
+  }
+];

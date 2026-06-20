@@ -1,0 +1,172 @@
+[
+  {
+    "id": "pr-01",
+    "name": "Royal Beard Oil Premium",
+    "category": "beard",
+    "priceRetail": 1250,
+    "priceWholesaleMin": 750,
+    "minWholesaleQty": 6,
+    "wholesaleUnitDesc": "Mínimo 6 un.",
+    "description": "Elixir nutritivo premium para barba con infusión de aceite de argán, jojoba pura y cedro canadiense.",
+    "features": [
+      "Brillo elegante no graso",
+      "Aroma masculino a madera de cedro",
+      "Estimula el vello saludable"
+    ],
+    "rating": 4.9,
+    "featured": true,
+    "inStock": true,
+    "illustrationType": "oil"
+  },
+  {
+    "id": "pr-02",
+    "name": "Lion Sculpting Beard Balm",
+    "category": "beard",
+    "priceRetail": 950,
+    "priceWholesaleMin": 580,
+    "minWholesaleQty": 6,
+    "wholesaleUnitDesc": "Mínimo 6 un.",
+    "description": "Bálsamo modelador de fijación media-suave formulado con manteca de karité y cera de abejas.",
+    "features": [
+      "Fijación media de larga duración",
+      "Elimina el frizz",
+      "Aroma cítrico noble"
+    ],
+    "rating": 4.8,
+    "featured": true,
+    "inStock": true,
+    "illustrationType": "balm"
+  },
+  {
+    "id": "pr-03",
+    "name": "Imperial Matte Clay Pomade",
+    "category": "hair",
+    "priceRetail": 1100,
+    "priceWholesaleMin": 650,
+    "minWholesaleQty": 12,
+    "wholesaleUnitDesc": "Mínimo 12 un.",
+    "description": "Cera de arcilla premium con base de agua para una fijación extrema de acabado mate impecable.",
+    "features": [
+      "Acabado 100% mate",
+      "Fijación extrema",
+      "Fácil remoción"
+    ],
+    "rating": 5,
+    "featured": true,
+    "inStock": true,
+    "illustrationType": "pomade"
+  },
+  {
+    "id": "pr-05",
+    "name": "Carbon Fiber Luxury Shaving Razor v2",
+    "category": "tools",
+    "priceRetail": 2100,
+    "priceWholesaleMin": 1350,
+    "minWholesaleQty": 4,
+    "wholesaleUnitDesc": "Mínimo 4 un.",
+    "description": "Navaja de afeitar profesional construida en fibra de carbono genuina ultra-ligera.",
+    "features": [
+      "Distribución de peso equilibrada",
+      "Cambio rápido de hoja",
+      "Cabezal premium"
+    ],
+    "rating": 4.9,
+    "featured": true,
+    "inStock": true,
+    "illustrationType": "razor"
+  },
+  {
+    "id": "pr-07",
+    "name": "Royal Gold Clipper (León Edición Especial)",
+    "category": "tools",
+    "priceRetail": 4800,
+    "priceWholesaleMin": 3200,
+    "minWholesaleQty": 3,
+    "wholesaleUnitDesc": "Mínimo 3 un.",
+    "description": "Máquina recortadora profesional inalámbrica en chasis totalmente metálico dorado.",
+    "features": [
+      "Batería 200 min",
+      "Isotipo león grabado",
+      "Corte zero-gap"
+    ],
+    "rating": 5,
+    "featured": true,
+    "inStock": true,
+    "illustrationType": "clipper"
+  },
+  {
+    "id": "pr-08",
+    "name": "Super Pack Reseller Barbero 20x",
+    "category": "wholesale",
+    "priceRetail": 22000,
+    "priceWholesaleMin": 14000,
+    "minWholesaleQty": 1,
+    "wholesaleUnitDesc": "1 Unidad de Pack",
+    "description": "Lote mayorista exclusivo de máximo ahorro que incluye pomadas, aceites de barba y material promocional.",
+    "features": [
+      "Ahorro del 45%",
+      "Material promocional incluido",
+      "Asesoría de ventas"
+    ],
+    "rating": 5,
+    "featured": true,
+    "inStock": true,
+    "illustrationType": "pack"
+  },
+  {
+    "id": "pr-8035",
+    "name": "GEL",
+    "category": "beard",
+    "priceRetail": 100,
+    "priceWholesaleMin": 100,
+    "minWholesaleQty": 6,
+    "wholesaleUnitDesc": "Mínimo 6 un.",
+    "description": "HOL A",
+    "features": [
+      "HOLA"
+    ],
+    "rating": 5,
+    "featured": true,
+    "inStock": true,
+    "imageUrl": "http://localhost:3000/uploads/product_1781974498033.png",
+    "media_url": "http://localhost:3000/uploads/product_1781974498033.png",
+    "media_type": "image",
+    "illustrationType": "pomade"
+  },
+  {
+    "id": "pr-5514",
+    "name": "GE PROP",
+    "category": "beard",
+    "priceRetail": 200,
+    "priceWholesaleMin": 250,
+    "minWholesaleQty": 6,
+    "wholesaleUnitDesc": "Mínimo 6 un.",
+    "description": "HOLA ",
+    "features": [],
+    "rating": 5,
+    "featured": true,
+    "inStock": true,
+    "imageUrl": "http://localhost:3000/uploads/product_1781974595512.png",
+    "media_url": "http://localhost:3000/uploads/product_1781974595512.png",
+    "media_type": "image",
+    "illustrationType": "pomade"
+  },
+  {
+    "id": "pr-3959",
+    "name": "ROYAL ZERO",
+    "category": "beard",
+    "priceRetail": 1500,
+    "priceWholesaleMin": 1000,
+    "minWholesaleQty": 6,
+    "wholesaleUnitDesc": "Mínimo 6 un.",
+    "description": "ROAL ZERO ",
+    "features": [],
+    "rating": 5,
+    "featured": true,
+    "inStock": true,
+    "imageUrl": "http://localhost:3000/uploads/product_1781975973955.png",
+    "media_url": "http://localhost:3000/uploads/product_1781975973955.png",
+    "media_type": "image",
+    "illustrationType": "pomade"
+  }
+]

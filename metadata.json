@@ -1,0 +1,6 @@
+{
+  "name": "Royal Grooming",
+  "description": "Premium barber products for modern professionals. Wholesale and Retail distributor with country-wide shipping.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
