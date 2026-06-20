@@ -114,44 +114,6 @@
     "illustrationType": "pack"
   },
   {
-    "id": "pr-8035",
-    "name": "GEL",
-    "category": "beard",
-    "priceRetail": 100,
-    "priceWholesaleMin": 100,
-    "minWholesaleQty": 6,
-    "wholesaleUnitDesc": "Mínimo 6 un.",
-    "description": "HOL A",
-    "features": [
-      "HOLA"
-    ],
-    "rating": 5,
-    "featured": true,
-    "inStock": true,
-    "imageUrl": "http://localhost:3000/uploads/product_1781974498033.png",
-    "media_url": "http://localhost:3000/uploads/product_1781974498033.png",
-    "media_type": "image",
-    "illustrationType": "pomade"
-  },
-  {
-    "id": "pr-5514",
-    "name": "GE PROP",
-    "category": "beard",
-    "priceRetail": 200,
-    "priceWholesaleMin": 250,
-    "minWholesaleQty": 6,
-    "wholesaleUnitDesc": "Mínimo 6 un.",
-    "description": "HOLA ",
-    "features": [],
-    "rating": 5,
-    "featured": true,
-    "inStock": true,
-    "imageUrl": "http://localhost:3000/uploads/product_1781974595512.png",
-    "media_url": "http://localhost:3000/uploads/product_1781974595512.png",
-    "media_type": "image",
-    "illustrationType": "pomade"
-  },
-  {
     "id": "pr-3959",
     "name": "ROYAL ZERO",
     "category": "beard",

@@ -12,7 +12,7 @@ export default defineConfig(() => {
       },
     },
     server: {
-      allowedHosts: true,
+      allowedHosts: ["royal-grooming.onrender.com", "localhost"],
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },

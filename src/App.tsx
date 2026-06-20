@@ -43,7 +43,8 @@ function CatalogApp() {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
-  const [adminMode, setAdminMode] = useState(false);
+  const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+  const [adminMode, setAdminMode] = useState(isLocal ? true : false);
   const catalogRef = useRef<HTMLDivElement>(null);
 
   // Dynamic Products List state initialized with standard seed data
