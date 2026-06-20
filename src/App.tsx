@@ -375,9 +375,6 @@ function CatalogApp() {
         {/* Cinematic Brand Marquee */}
         <Hero onBrowseCatalog={scrollToCatalog} />
 
-        {/* Brand visual proposition blocks */}
-        <ValueProps />
-
         {/* Dynamic Catalog Section */}
         <div ref={catalogRef} className="scroll-mt-20 py-16 sm:py-24 bg-neutral-950">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -525,6 +522,9 @@ function CatalogApp() {
 
           </div>
         </div>
+
+        {/* Brand visual proposition blocks */}
+        <ValueProps />
 
         {/* Instagram CTA & Social Follow Screen */}
         <section className="bg-neutral-950 border-t border-neutral-900 py-16 text-center relative overflow-hidden">
