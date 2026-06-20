@@ -15,10 +15,6 @@ export default defineConfig(() => {
       allowedHosts: ["royal-grooming.onrender.com", "localhost"],
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
-      proxy: {
-        '/api': 'http://localhost:3000',
-        '/uploads': 'http://localhost:3000',
-      },
     },
   };
 });

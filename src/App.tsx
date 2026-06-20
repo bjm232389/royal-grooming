@@ -31,7 +31,6 @@ import {
 import { Product } from './types';
 
 function CatalogApp() {
-  const API_BASE = typeof import.meta !== 'undefined' ? (import.meta as any).env?.VITE_API_URL || '' : '';
   const { 
     pricingMode, 
     setPricingMode, 
@@ -145,7 +144,7 @@ function CatalogApp() {
         formData.append('media', editSelectedFile);
       }
 
-      const response = await fetch(`${API_BASE}/api/products/${editingProduct.id}`, {
+      const response = await fetch(`/api/products/${editingProduct.id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${adminToken}`
@@ -180,7 +179,7 @@ function CatalogApp() {
 
     setIsDeletingProduct(true);
     try {
-      const response = await fetch(`${API_BASE}/api/products/${editingProduct.id}`, {
+      const response = await fetch(`/api/products/${editingProduct.id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${adminToken}`
@@ -211,7 +210,7 @@ function CatalogApp() {
   const fetchProducts = async () => {
     setIsFetchingProducts(true);
     try {
-      const response = await fetch(`${API_BASE}/api/products`);
+      const response = await fetch('/api/products');
       if (response.ok) {
         const data = await response.json();
         if (data.success && Array.isArray(data.products) && data.products.length > 0) {
@@ -337,7 +336,7 @@ function CatalogApp() {
         formData.append('media', selectedFile);
       }
 
-      const response = await fetch(`${API_BASE}/api/products`, {
+      const response = await fetch('/api/products', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${adminToken}`
