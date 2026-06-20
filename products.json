@@ -126,8 +126,8 @@
     "rating": 5,
     "featured": true,
     "inStock": true,
-    "imageUrl": "http://localhost:3000/uploads/product_1781975973955.png",
-    "media_url": "http://localhost:3000/uploads/product_1781975973955.png",
+    "imageUrl": "/uploads/product_1781975973955.png",
+    "media_url": "/uploads/product_1781975973955.png",
     "media_type": "image",
     "illustrationType": "pomade"
   },
@@ -144,8 +144,8 @@
     "rating": 5,
     "featured": true,
     "inStock": true,
-    "imageUrl": "http://localhost:3000/uploads/product_1781981068559.png",
-    "media_url": "http://localhost:3000/uploads/product_1781981068559.png",
+    "imageUrl": "/uploads/product_1781981068559.png",
+    "media_url": "/uploads/product_1781981068559.png",
     "media_type": "image",
     "illustrationType": "pomade"
   },
@@ -162,8 +162,8 @@
     "rating": 5,
     "featured": true,
     "inStock": true,
-    "imageUrl": "http://localhost:3000/uploads/product_1781981185893.png",
-    "media_url": "http://localhost:3000/uploads/product_1781981185893.png",
+    "imageUrl": "/uploads/product_1781981185893.png",
+    "media_url": "/uploads/product_1781981185893.png",
     "media_type": "image",
     "illustrationType": "pomade"
   }

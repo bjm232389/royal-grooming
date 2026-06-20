@@ -358,11 +358,8 @@ app.post("/api/products", upload.single("media"), async (req, res, next) => {
         
         fs.writeFileSync(localFilePath, file.buffer);
         
-        // Return absolute URL dynamically using incoming request's host to avoid localhost:3000 errors!
-        const protocol = req.headers["x-forwarded-proto"] || req.protocol;
-        const host = req.get("host");
-        const baseUrl = `${protocol}://${host}`;
-        finalMediaUrl = `${baseUrl}/uploads/${uniqueFilename}`;
+        // Use relative URL so it works on any domain (localhost, Render, etc.)
+        finalMediaUrl = `/uploads/${uniqueFilename}`;
         writeLog(`Saved product file locally as simulation: ${finalMediaUrl}`);
       }
     }
@@ -528,10 +525,8 @@ app.put("/api/products/:id", upload.single("media"), async (req, res, next) => {
         
         fs.writeFileSync(localFilePath, file.buffer);
         
-        const protocol = req.headers["x-forwarded-proto"] || req.protocol;
-        const host = req.get("host");
-        const baseUrl = `${protocol}://${host}`;
-        finalMediaUrl = `${baseUrl}/uploads/${uniqueFilename}`;
+        // Use relative URL so it works on any domain
+        finalMediaUrl = `/uploads/${uniqueFilename}`;
         writeLog(`Saved edited product file locally: ${finalMediaUrl}`);
       }
     }
