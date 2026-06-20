@@ -367,7 +367,7 @@ function CatalogApp() {
     <div className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col font-sans selection:bg-gold-500 selection:text-neutral-900">
       
       {/* Prime Header & Navigation */}
-      <Navbar onOpenCart={() => setIsCartOpen(true)} />
+      <Navbar onOpenCart={() => setIsCartOpen(true)} onToggleAdmin={() => setAdminMode(prev => !prev)} />
 
       {/* Main Core View Modules */}
       <main className="flex-grow">

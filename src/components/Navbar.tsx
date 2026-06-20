@@ -4,20 +4,34 @@ import { ShoppingBag, Sparkles, SwitchCamera, Info } from 'lucide-react';
 
 interface NavbarProps {
   onOpenCart: () => void;
+  onToggleAdmin?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenCart }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenCart, onToggleAdmin }) => {
   const { cart, pricingMode, setPricingMode } = useCart();
+  const tapCountRef = React.useRef(0);
+  const tapTimerRef = React.useRef<ReturnType<typeof setTimeout>>();
 
   // Calculate total items in the cart
   const cartItemCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+  const handleLogoTap = () => {
+    tapCountRef.current += 1;
+    if (tapTimerRef.current) clearTimeout(tapTimerRef.current);
+    if (tapCountRef.current >= 7) {
+      tapCountRef.current = 0;
+      onToggleAdmin?.();
+      return;
+    }
+    tapTimerRef.current = setTimeout(() => { tapCountRef.current = 0; }, 1000);
+  };
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-neutral-900 bg-neutral-950/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 sm:h-20 max-w-7xl items-center justify-between px-3 sm:px-6 lg:px-8">
         
         {/* Artistic Brand Logo Matching User's Real Identity */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 cursor-pointer" onClick={handleLogoTap}>
           <div className="relative h-10 w-10 sm:h-14 sm:w-14 flex items-center justify-center">
             {/* Soft Cyan Ambient Glow */}
             <div className="absolute inset-0 bg-brand-cyan/15 blur-md rounded-full"></div>
