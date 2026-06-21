@@ -53,7 +53,7 @@ function CatalogApp() {
 
   // Admin Form state
   const [showToken, setShowToken] = useState(false);
-  const [adminToken, setAdminToken] = useState(isLocal ? 'royal_admin_secret_token' : '');
+  const [adminToken, setAdminToken] = useState('royal_admin_secret_token');
   const [newProductName, setNewProductName] = useState('');
   const [newProductCategory, setNewProductCategory] = useState<'beard' | 'hair' | 'tools' | 'wholesale'>('beard');
   const [newProductPriceRetail, setNewProductPriceRetail] = useState('');
