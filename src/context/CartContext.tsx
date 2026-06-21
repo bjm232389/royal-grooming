@@ -96,19 +96,18 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       saveCartToStorage(updatedCart);
 
-      // Give correct feedback based on retail vs wholesale mode
-      const minQty = product.minWholesaleQty;
-      if (pricingMode === 'wholesale' && updatedCart.find(i => i.product.id === product.id)!.quantity < minQty) {
-        showToast(
-          `Agregado. Recuerda que para precio Mayorista requiere un mínimo de ${minQty} unidades de este producto.`,
-          'warn'
-        );
-      } else {
-        showToast(`"${product.name}" agregado al carrito`, 'success');
-      }
-
       return updatedCart;
     });
+    // Show toast after state update to avoid double-firing in StrictMode
+    const minQty = product.minWholesaleQty;
+    if (pricingMode === 'wholesale' && (cart.find(i => i.product.id === product.id)?.quantity ?? 0) + quantity < minQty) {
+      showToast(
+        `Agregado. Recuerda que para precio Mayorista requiere un mínimo de ${minQty} unidades de este producto.`,
+        'warn'
+      );
+    } else {
+      showToast(`"${product.name}" agregado al carrito`, 'success');
+    }
   };
 
   const removeFromCart = (productId: string) => {
